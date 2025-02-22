@@ -1,0 +1,1 @@
+export const GOOGLE_CLOUD_VISION_API_KEY = 'YOUR_API_KEY'; 

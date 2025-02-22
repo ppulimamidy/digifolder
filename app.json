@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "personal-digital-library",
+    "slug": "personal-digital-library",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan documents.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photos to upload existing documents.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs access to save downloaded files to your photos.",
+        "LSApplicationQueriesSchemes": [
+          "adobescan",
+          "ms-office-lens",
+          "ms-officelens",
+          "com.microsoft.office.officelens"
+        ]
+      },
+      "usesIcloudStorage": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "personal-digital-library",
+              "host": "scan"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-file-system",
+        {
+          "filePermission": "Allows reading and writing files to the app's directory."
+        }
+      ],
+      "expo-video",
+      [
+        "expo-router",
+        {
+          "origin": "https://yourapp.com"
+        }
+      ]
+    ],
+    "scheme": "personal-digital-library",
+    "newArchEnabled": true
+  }
+}
